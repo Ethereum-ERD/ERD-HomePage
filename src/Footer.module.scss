@@ -1,9 +1,10 @@
 .wrap {
     position: relative;
     padding: 66px 360px 77px;
-    background: var(--main-color);
+    background: rgba(248, 250, 254, 0.7);
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid #DAE6F8;
 }
 
 .links {
@@ -13,7 +14,7 @@
         margin-right: 40px;
         font-size: 20px;
         line-height: 25px;
-        color: rgba(255, 255, 255, 0.7);
+        color: #666;
         cursor: pointer;
         font-style: normal;
         font-family: CircularStd-Book;
@@ -27,7 +28,7 @@
 
 .brandIcon {
     img {
-        width: 100px;
+        width: 102px;
     }
 }
 
@@ -93,24 +94,30 @@
         display: flex;
         box-sizing: content-box;
     }
+
     .Container {
         width: 100%;
         margin: auto;
+        display: flex;
+        flex-direction: column;
     }
+
     .brandIcon {
         flex: 1;
         justify-content: flex-start;
         float: left;
     }
+
     .rightPart {
-        flex: 1;
-        float: right;
+        width: 100%;
     }
 
     .links {
+        margin-top: 40px;
         display: flex;
+        order: 2;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: flex-start;
         p {
             margin-right: 20px;
             font-size: 14px;
@@ -118,12 +125,14 @@
     }
 
     .medias {
-        margin-top: 20px;
+        margin-top: 40px;
         display: flex;
+        order: 1;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: flex-start;
+
         div {
-            margin-right: 20px;
+            margin-right: 40px;
             cursor: pointer;
 
             &:last-child {

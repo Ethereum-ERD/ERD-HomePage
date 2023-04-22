@@ -107,7 +107,7 @@
     }
 
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
         justify-content: flex-end;
     }
 }
@@ -115,15 +115,6 @@
 @media screen and (max-width: 1199px) and (min-width: 744px) {
     .container {
         max-width: 768px;
-    }
-
-    .padIcon {
-        display: block;
-    }
-
-    .desktopIcon,
-    .mobileIcon {
-        display: none;
     }
 
     .links {
