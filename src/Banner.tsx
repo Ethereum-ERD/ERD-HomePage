@@ -37,58 +37,51 @@ export default observer(function Banner() {
 
     return (
         <div className={s.wrap} id="Banner">
-            <div className={s.desktopIcon}>
-                <img src={Logo} alt="" />
-            </div>
-
-            <div className={s.padIcon}>
-                <img src={Logo} alt="" />
-            </div>
-
-            <div className={s.mobileIcon}>
-                <img src={Logo} alt="" />
-            </div>
-
-            <div className={s.links}>
-                {Menu.map((menu) => {
-                    return (
-                        <p
-                            onClick={() => handleMenuClick(menu.link)}
-                            key={menu.link}
-                        >
-                            {menu.title}
-                        </p>
-                    );
-                })}
-            </div>
-            <div className={s.menuWrap} onClick={handleClick}>
-                <FormatListBulletedIcon
-                    fontSize="medium"
-                    className={s.menuIcon}
-                />
-            </div>
-            <Popover
-                open={showMenu}
-                id={showMenu ? "simple-popover" : undefined}
-                anchorEl={anchorEl}
-                className={s.popover}
-                onClose={() => setShowMenu(false)}
-                anchorOrigin={anchorOrigin}
-            >
-                <div className={s.popMenu}>
+            <div className={s.container}>
+                <div className={s.logo}>
+                    <img src={Logo} alt="" />
+                </div>
+                <div className={s.links}>
                     {Menu.map((menu) => {
                         return (
                             <p
-                                key={menu.link}
-                                className={s.popMenuItem}
                                 onClick={() => handleMenuClick(menu.link)}
+                                key={menu.link}
                             >
                                 {menu.title}
                             </p>
                         );
                     })}
                 </div>
-            </Popover>
+                <div className={s.menuWrap} onClick={handleClick}>
+                    <FormatListBulletedIcon
+                        fontSize="medium"
+                        className={s.menuIcon}
+                    />
+                </div>
+                <Popover
+                    open={showMenu}
+                    id={showMenu ? "simple-popover" : undefined}
+                    anchorEl={anchorEl}
+                    className={s.popover}
+                    onClose={() => setShowMenu(false)}
+                    anchorOrigin={anchorOrigin}
+                >
+                    <div className={s.popMenu}>
+                        {Menu.map((menu) => {
+                            return (
+                                <p
+                                    key={menu.link}
+                                    className={s.popMenuItem}
+                                    onClick={() => handleMenuClick(menu.link)}
+                                >
+                                    {menu.title}
+                                </p>
+                            );
+                        })}
+                    </div>
+                </Popover>
+            </div>
         </div>
     );
 });

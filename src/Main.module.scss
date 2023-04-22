@@ -1,6 +1,5 @@
 .wrap {
     position: relative;
-    // padding: 0 360px 237px;
     margin: auto;
 }
 
@@ -92,7 +91,7 @@
     width: 100vw;
     height: 212px;
     margin-top: -50px;
-    margin-left: -360px;
+    margin-left: calc(50% - 50vw);
     background: linear-gradient(
         360deg,
         #fff 39.84%,
@@ -238,7 +237,6 @@
     .mask {
         height: 87px;
         margin-top: 30px;
-        margin-left: -80px;
     }
 
     .title {
@@ -343,7 +341,6 @@
 
     .mask {
         height: 63px;
-        margin-left: -20px;
     }
 
     .title {
