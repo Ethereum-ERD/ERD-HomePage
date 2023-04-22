@@ -1,6 +1,7 @@
 .wrap {
     position: relative;
-    padding: 0 360px 237px;
+    // padding: 0 360px 237px;
+    margin: auto;
 }
 
 .topWrap {
@@ -92,7 +93,11 @@
     height: 212px;
     margin-top: -50px;
     margin-left: -360px;
-    background: linear-gradient(360deg, #fff 39.84%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(
+        360deg,
+        #fff 39.84%,
+        rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .title {
@@ -112,7 +117,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    & .advantage:nth-child(n+3) {
+    & .advantage:nth-child(n + 3) {
         margin-top: 90px;
     }
 }
@@ -156,19 +161,25 @@
     right: -68px;
 }
 
-@media screen and (max-width: 1919px) {
+@media screen and (min-width: 1200px) {
+    .wrap {
+        margin: auto;
+        width: 1200px;
+    }
     .bottomImg {
         display: none;
     }
 
-    .topDesktopImg {
-        display: none;
+    .advantages {
+        margin-bottom: 244px;
     }
 }
 
-@media screen and (max-width: 1919px) and (min-width: 920px) {
+@media screen and (max-width: 1199px) and (min-width: 744px) {
     .wrap {
-        padding: 0 80px 100px;
+        overflow: hidden;
+        margin: auto;
+        max-width: 768px;
     }
 
     .topWrap {
@@ -184,7 +195,6 @@
         display: block;
         width: 451px;
         height: 305px;
-        margin-left: 63px;
         order: 2;
         flex: 0 0 auto;
 
@@ -239,6 +249,11 @@
 
     .advantages {
         margin-top: 85px;
+        margin-bottom: 75px;
+    }
+
+    .bottomImg {
+        display: none;
     }
 
     .advantage {
@@ -261,7 +276,7 @@
     }
 }
 
-@media screen and (max-width: 919px) {
+@media screen and (max-width: 743px) {
     .wrap {
         padding: 0 20px 30px;
     }
@@ -273,6 +288,10 @@
     }
 
     .topPadImg {
+        display: none;
+    }
+
+    .topDesktopImg {
         display: none;
     }
 
@@ -337,9 +356,10 @@
 
     .advantages {
         margin-top: 15px;
+        margin-bottom: 32px;
         flex-direction: column;
 
-        & .advantage:nth-child(n+3) {
+        & .advantage:nth-child(n + 3) {
             margin-top: 15px;
         }
     }
@@ -350,7 +370,7 @@
         padding: 20px;
         margin-top: 15px;
         background-color: #fff;
-        border: 1px solid #DAE6F8;
+        border: 1px solid #dae6f8;
         border-radius: 24px;
 
         img {

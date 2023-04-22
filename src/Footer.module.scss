@@ -13,7 +13,7 @@
         margin-right: 40px;
         font-size: 20px;
         line-height: 25px;
-        color: rgba(255, 255, 255, .7);
+        color: rgba(255, 255, 255, 0.7);
         cursor: pointer;
         font-style: normal;
         font-family: CircularStd-Book;
@@ -51,16 +51,21 @@
     }
 }
 
-@media screen and (max-width: 1919px) and (min-width: 920px) {
+@media screen and (min-width: 744px) and (max-width: 1199px) {
     .wrap {
-        position: relative;
-        padding: 30px 90px;
+        display: flex;
+        padding: 30px;
     }
-    
+    .Container {
+        width: 744px;
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+    }
     .brandIcon {
-        position: absolute;
-        top: 30px;
-        left: 90px;
+        position: relative;
+        top: 0;
+        left: 0;
     }
 
     .rightPart {
@@ -68,33 +73,88 @@
     }
 
     .links {
+        display: flex;
         margin-top: 6px;
+        flex-direction: row;
         justify-content: flex-end;
     }
 
     .medias {
         margin-top: 40px;
-        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
     }
 }
 
-@media screen and (max-width: 919px) {
+@media screen and (max-width: 743px) {
     .wrap {
-        padding: 30px 20px;
-        flex-direction: column;
+        padding: 30px 30px;
+        display: flex;
     }
-
+    .Container {
+        width: 743px;
+        margin: auto;
+    }
+    .brandIcon {
+        flex: 1;
+        justify-content: flex-start;
+        float: left;
+    }
     .rightPart {
-        width: 100%;
-        margin-top: 50px;
+        flex: 1;
+        float: right;
     }
 
     .links {
-        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        p {
+            margin-right: 20px;
+        }
     }
 
     .medias {
-        margin-top: 40px;
-        justify-content: space-between;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .wrap {
+        padding: 30px 30px;
+        display: flex;
+    }
+    .Container {
+        width: 1200px;
+        margin: auto;
+    }
+    .brandIcon {
+        flex: 1;
+        justify-content: flex-start;
+        float: left;
+    }
+    .rightPart {
+        flex: 1;
+        float: right;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        p {
+            margin-right: 20px;
+        }
+    }
+
+    .medias {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
     }
 }
