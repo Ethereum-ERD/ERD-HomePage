@@ -15,7 +15,7 @@ const Menu = [
 
 export default observer(function Banner() {
     const handleMenuClick = (link: string) => {
-        window.open(link, "_target");
+        window.open(link, "_blank");
     };
 
     return (
