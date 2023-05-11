@@ -1,13 +1,25 @@
 .wrap {
-    position: relative;
-    padding: 66px 360px 77px;
-    background: rgba(248, 250, 254, 0.7);
+    width: 100%;
+    margin-top: 192px;
+    padding-bottom: 116px;
+}
+
+.Container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #DAE6F8;
+}
+
+.leftPart {
+    display: flex;
+    flex-direction: column;
 }
 
 .links {
+    margin-top: 25px;
     display: flex;
 
     p {
@@ -16,9 +28,6 @@
         line-height: 25px;
         color: #666;
         cursor: pointer;
-        font-style: normal;
-        font-family: CircularStd-Book;
-        font-weight: 450;
 
         &:last-child {
             margin-right: 0;
@@ -32,148 +41,18 @@
     }
 }
 
-.rightPart {
-    display: flex;
-    flex-direction: column;
-}
-
 .medias {
-    margin-top: 47px;
     display: flex;
     justify-content: flex-end;
 
     div {
+        width: 40px;
+        height: 40px;
         margin-right: 40px;
         cursor: pointer;
 
         &:last-child {
             margin-right: 0;
         }
-    }
-}
-
-@media screen and (min-width: 744px) and (max-width: 1199px) {
-    .wrap {
-        display: flex;
-        padding: 30px;
-    }
-    .Container {
-        width: 744px;
-        display: flex;
-        margin: auto;
-        flex-direction: row;
-    }
-    .brandIcon {
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-
-    .rightPart {
-        width: 100%;
-    }
-
-    .links {
-        display: flex;
-        margin-top: 6px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    .medias {
-        margin-top: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-}
-
-@media screen and (max-width: 743px) {
-    .wrap {
-        padding: 30px 30px;
-        display: flex;
-        box-sizing: content-box;
-    }
-
-    .Container {
-        width: 100%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .brandIcon {
-        flex: 1;
-        justify-content: flex-start;
-        float: left;
-    }
-
-    .rightPart {
-        width: 100%;
-    }
-
-    .links {
-        margin-top: 40px;
-        display: flex;
-        order: 2;
-        flex-direction: row;
-        justify-content: flex-start;
-        p {
-            margin-right: 20px;
-            font-size: 14px;
-        }
-    }
-
-    .medias {
-        margin-top: 40px;
-        display: flex;
-        order: 1;
-        flex-direction: row;
-        justify-content: flex-start;
-
-        div {
-            margin-right: 40px;
-            cursor: pointer;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .wrap {
-        padding: 30px 30px;
-        display: flex;
-    }
-    .Container {
-        width: 1200px;
-        margin: auto;
-    }
-    .brandIcon {
-        flex: 1;
-        justify-content: flex-start;
-        float: left;
-    }
-    .rightPart {
-        flex: 1;
-        float: right;
-    }
-
-    .links {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        p {
-            margin-right: 20px;
-        }
-    }
-
-    .medias {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
     }
 }

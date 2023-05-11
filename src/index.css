@@ -4,35 +4,46 @@
 * {
     margin: 0;
     padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
 }
 
 *,::after,::before {
     box-sizing: border-box
 }
 
-a:link {
+a:link,
+a:visited,
+a:focus-visible {
     text-decoration: inherit;
     color: inherit;
     cursor: pointer;
+    outline: none;
 }
 
-a:visited {
-    text-decoration: inherit;
-    color: inherit;
-    cursor: pointer;
-}
-
-html,
-body,
-#root {
-    background-color: #fff;
+html {
+    font-family: CircularStd-Book;
+    font-weight: 450;
+    font-style: normal;
 }
 
 #root {
     width: 100%;
     width: 100vw;
-    height: 100%;
     height: 100vh;
-    overflow-x: hidden;
     overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--main-color);
+}
+
+#root::-webkit-scrollbar {
+    display: none;
 }

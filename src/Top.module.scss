@@ -1,19 +1,14 @@
 .wrap {
     width: 100vw;
+    height: 1080px;
     background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: 100vw 1080px;
-    background-image: url("./asset/top-bg.svg");
+    background-size: 1920px 1080px;
+    background-image: url("./asset/top-bg.png");
 }
 
-@media screen and (max-width: 1919px) and (min-width: 920px) {
-    .wrap {
-        background-size: 100vw 540px;
-    }
-}
-
-@media screen and (max-width: 919px) {
-    .wrap {
-        background-size: 100vw 642px;
-    }
+.container {
+    width: 100vw;
+    height: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, #191B1F 100%);
 }
