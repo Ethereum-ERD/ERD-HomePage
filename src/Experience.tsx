@@ -10,22 +10,22 @@ const Functions = [
     {
         icon: MintImg,
         name: 'Mint',
-        desc: 'Deposit collateral into ERD to mint USDE'
+        desc: 'Deposit collateral into ERD to mint USDE.'
     },
     {
         icon: DepositImg,
         name: 'Deposit-SP',
-        desc: 'Deposit USDE to earn collaterals'
+        desc: 'Deposit USDE to earn collaterals.'
     },
     {
         icon: LiquidateImg,
         name: 'Liquidate',
-        desc: 'Liquidate collateral based on mortgage rate'
+        desc: 'Liquidate collateral based on mortgage rate.'
     },
     {
         icon: RedeemImg,
         name: 'Redeem',
-        desc: 'Exchange USDE for collaterals at face value'
+        desc: 'Exchange USDE for collaterals at face value.'
     }
 ];
 
@@ -48,7 +48,7 @@ export default function Experience() {
                 <div className={s.exploreCard}>
                     <div>
                         <p className={s.exploreTitle}>Mint, deposit, and earn on the decentralized stablecoin protocol</p>
-                        <p className={s.exploreDesc}>We support a variety of collaterals. Maximum release of liquidity by 0.25% interest rate, experience it now.</p>
+                        <p className={s.exploreDesc}>We support a variety of collaterals. Maximum release of liquidity by 0.25% interest rate. experience it now.</p>
                     </div>
                     <div className={s.exploreBtn} onClick={handleExplore}>Explore all</div>
                     <img className={s.mascot} src={MascotImg} alt='mascot img' />
