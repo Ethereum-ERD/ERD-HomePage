@@ -1,8 +1,8 @@
 .wrap {
     width: 100vw;
-    height: 980px;
+    height: calc(var(--top-wrap-height) - var(--banner-height));
     max-width: 1200px;
-    padding-bottom: 226px;
+    padding-bottom: var(--top-wrap-bottom-padding);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -38,5 +38,31 @@
         &:hover {
             opacity: .7;
         }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .name {
+        font-size: 30px;
+        line-height: 133%;
+    }
+
+    .slogan {
+        font-size: 14px;
+        line-height: 133%;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 744px) {
+    .wrap {
+        padding: 0 44px;
+        padding-bottom: var(--top-wrap-bottom-padding);
+    }
+}
+
+@media screen and (max-width: 743px) {
+    .wrap {
+        padding: 0 20px;
+        padding-bottom: var(--top-wrap-bottom-padding);
     }
 }

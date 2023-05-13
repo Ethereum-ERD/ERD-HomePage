@@ -1,5 +1,5 @@
 .wrap {
-    height: 100px;
+    height: var(--banner-height);
     width: 100vw;
     border-bottom: 1px solid rgba(35, 97, 255, 0.1);
     backdrop-filter: blur(3px);
@@ -45,20 +45,9 @@
     }
 }
 
-.launchBtnWrap {
-    padding: 5px;
-    border-radius: 63px;
-    border: 2px solid transparent;
-    background-origin: border-box;
-    background-clip: padding-box,border-box;
-    background-image: linear-gradient(0deg, #191B1F, #191B1F),radial-gradient(circle at left bottom, #863CFF, #FF7878);
-    opacity: 1;
-    cursor: pointer;
-    transition: opacity .2s ease-in-out;
-
-    &:hover {
-        opacity: .7;
-    }
+.right {
+    display: flex;
+    align-items: center;
 }
 
 .launchBtn {
@@ -73,4 +62,95 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity .2s ease-in-out;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+.mobileMenu {
+    display: none;
+}
+
+li.mobileMenuItem {
+    height: 50px;
+    padding: 16px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .launchBtn {
+        width: 112px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 744px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .links p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 743px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .mobileMenu {
+        margin-left: 30px;
+        display: block;
+    }
+
+    .mobileMenuList {
+        width: 194px;
+
+        background: #1E1F23;
+        border: 1px solid #393B3F;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    div.popMenuRoot {
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    ul.popMenuList {
+        padding: 0;
+        margin-top: 20px;
+        border-radius: 16px;
+        box-shadow: none;
+    }
 }

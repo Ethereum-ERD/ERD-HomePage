@@ -38,6 +38,14 @@
     margin-top: 0;
 }
 
+.auditIcon {
+    display: block;
+}
+
+.auditPadIcon {
+    display: none;
+}
+
 .auditTime {
     margin-top: 30px;
     font-size: 16px;
@@ -79,7 +87,7 @@
     color: rgba(255, 255, 255, .7);
 }
 
-.auditInfo {
+.auditBtn {
     width: 158px;
     height: 47px;
 
@@ -106,5 +114,158 @@
 
     svg {
         margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 744px) {
+    .wrap {
+        margin-top: 87px;
+        padding: 0 30px;
+    }
+
+    .title {
+        font-size: 20px;
+        line-height: 133%;
+    }
+
+    .section {
+        margin-top: 20px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .auditList {
+        width: 100%;
+        margin-top: 40px;
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .audit {
+        width: calc(33% - 17px);
+        margin-top: 0;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .auditCard {
+        width: 100%;
+        height: 194px;
+        padding: 20px;
+        border-radius: 10px;
+        order: 1;
+    }
+
+    .auditTitle {
+        font-size: 16px;
+    }
+
+    .auditDesc {
+        margin-top: 24px;
+        font-size: 14px;
+    }
+
+    .auditIcon {
+        display: none;
+    }   
+
+    .auditPadIcon {
+        display: block;
+    }
+
+    .auditTime {
+        margin-top: 12px;
+        font-size: 12px;
+    }
+
+    .auditStatus {
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    .auditBtn {
+        width: 153px;
+        height: 39px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 743px) {
+    .wrap {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .section {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .auditCard {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        order: 1;
+    }
+
+    .auditTitle {
+        font-size: 16px;
+    }
+
+    .auditDesc {
+        margin-top: 24px;
+        font-size: 14px;
+    }
+
+    .auditBtn {
+        margin-top: 63px;
+        font-size: 14px;
+    }
+
+    .auditList {
+        margin-top: 20px;
+        order: 2;
+    }
+
+    .audit {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+        flex-direction: column;
+
+        div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .auditIcon {
+        display: none;
+    }
+
+    .auditPadIcon {
+        display: block;
+    }
+
+    .auditTime {
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    .auditStatus {
+        width: 100%;
+        margin-top: 27px;
+        font-size: 14px;
+        text-align: left;
     }
 }

@@ -9,7 +9,7 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 
@@ -26,7 +26,7 @@
         margin-right: 40px;
         font-size: 20px;
         line-height: 25px;
-        color: #666;
+        color: #fff;
         cursor: pointer;
         opacity: 1;
         transition: opacity .2s ease-in-out;
@@ -49,11 +49,10 @@
 
 .medias {
     display: flex;
+    align-items: flex-end;
     justify-content: flex-end;
 
     div {
-        width: 40px;
-        height: 40px;
         margin-right: 40px;
         cursor: pointer;
         opacity: 1;
@@ -65,6 +64,58 @@
 
         &:last-child {
             margin-right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 744px) {
+    .wrap {
+        margin-top: 52px;
+        padding-bottom: 49px;
+    }
+
+    .Container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 743px) {
+    .wrap {
+        margin-top: 96px;
+        padding-bottom: 57px;
+    }
+
+    .Container {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    .leftPart {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .links {
+        margin-top: 0;
+        align-items: flex-end;
+        flex-direction: column;
+
+        p {
+            margin-top: 30px;
+            margin-right: 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .medias {
+        margin-top: -27px;
+        justify-content: flex-start;
+
+        div {
+            margin-right: 20px;
         }
     }
 }
