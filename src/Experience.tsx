@@ -51,7 +51,12 @@ export default function Experience() {
                         <p className={s.exploreTitle}>Mint, deposit, and earn on the decentralized stablecoin protocol</p>
                         <p className={s.exploreDesc}>We offer support for a diverse range of collaterals, enabling maximum liquidity release at a rate of 0.25%. Try it now.</p>
                     </div>
-                    <div className={s.exploreBtn} onClick={handleExplore}>Explore all</div>
+                    <div className={s.exploreBtn} onClick={handleExplore}>
+                        Explore all
+                        <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.2314 2.96206L6.23148 7.48018L7.87976 7.48018L7.87968 0.999994C7.87968 0.723854 7.65582 0.5 7.37968 0.5L0.46243 0.499999L0.46243 1.94224L5.0659 1.94224L5.51797e-05 7.48018L1.16556 8.5L6.2314 2.96206Z" fill="white" fillOpacity="0.7"/>
+                        </svg>
+                    </div>
                 </div>
                 <div className={s.functions}>
                     {Functions.map(f => {
