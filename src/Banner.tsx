@@ -10,6 +10,7 @@ import s from "./Banner.module.scss";
 
 const MenuList = [
     { title: "Community", link: "https://discord.gg/A8heyMV6qC" },
+    { title: "Blog", link: "https://blog.erd.xyz" },
     {
         title: "Contract",
         link: "https://github.com/Ethereum-ERD",

@@ -24,6 +24,9 @@ export default observer(function Footer() {
                         >
                             Community
                         </p>
+                        <p onClick={() => handleClick('https://blog.erd.xyz')}>
+                            Blog
+                        </p>
                         <p
                             onClick={() =>
                                 handleClick("https://github.com/Ethereum-ERD")
