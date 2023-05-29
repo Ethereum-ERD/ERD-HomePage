@@ -32,7 +32,7 @@ const AuditList = [
         padIcon: CoinSpectPadImg,
         icon: CoinSpectImg,
         status: 'Auditing...',
-        reportTime: 'Jun 2023',
+        reportTime: 'Jul 2023',
         padIconWidth: 130,
         padIconHeight: 28,
         width: 216,
