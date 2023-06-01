@@ -6,6 +6,7 @@ import CoinSpectPadImg from 'src/asset/audit/coinspect-pad.png';
 import PeckShieldImg from 'src/asset/audit/peckshield.png';
 import Code4RenaImg from 'src/asset/audit/code4rena.png';
 import CoinSpectImg from 'src/asset/audit/coinspect.png';
+import MascotImg from 'src/asset/mascot.png';
 
 const AuditList = [
     {
@@ -75,7 +76,8 @@ export default function Audit() {
                     })}
                 </div>
                 <div className={s.auditCard}>
-                    <div>
+                    <img className={s.mascot} src={MascotImg} alt='mascot img' />
+                    <div style={{ position: 'relative' }}>
                         <p className={s.auditTitle}>We will do our best to protect your assets</p>
                         <p className={s.auditDesc}>Following the audit by the world-leading security companies, the security of the ERD protocol is of the highest priority.</p>
                     </div>

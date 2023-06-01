@@ -34,6 +34,14 @@
     justify-content: space-between;
 }
 
+.mascot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 199px;
+    height: 239px;
+}
+
 .audit:first-child {
     margin-top: 0;
 }
@@ -60,6 +68,7 @@
 }
 
 .auditCard {
+    position: relative;
     width: 483px;
     padding: 40px;
     background: #1E1F23;
@@ -88,6 +97,7 @@
 }
 
 .auditBtn {
+    position: relative;
     width: 158px;
     height: 47px;
 
