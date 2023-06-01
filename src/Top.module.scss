@@ -1,26 +1,28 @@
 .wrap {
+    position: relative;
     width: 100vw;
     height: var(--top-wrap-height);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("./asset/top-bg.png");
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    user-select: none;
+    pointer-events: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .container {
+    position: relative;
     width: 100vw;
     height: 100%;
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, #191B1F 100%);
-}
-
-@media screen and (max-width: 1199px) and (min-width: 744px) {
-    .wrap {
-        background-image: url("./asset/top-bg-pad.svg");
-    }
-}
-
-@media screen and (max-width: 743px) {
-    .wrap {
-        background-image: url("./asset/top-bg-mobile.svg");
-    }
 }
