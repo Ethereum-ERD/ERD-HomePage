@@ -4,7 +4,7 @@ import LiquidateImg from 'src/asset/functions/liquidate.png';
 import DepositImg from 'src/asset/functions/deposit.png';
 import RedeemImg from 'src/asset/functions/redeem.png';
 import MintImg from 'src/asset/functions/mint.png';
-import MascotImg from 'src/asset/mascot.png';
+import MascotImg from 'src/asset/top-mascot.png';
 
 const Functions = [
     {
