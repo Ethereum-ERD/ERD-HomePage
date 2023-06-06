@@ -2,10 +2,9 @@ import s from './Audit.module.scss';
 
 import PeckShieldPadImg from 'src/asset/audit/peckshield-pad.png';
 import Code4RenaPadImg from 'src/asset/audit/code4rena-pad.png';
-import CoinSpectPadImg from 'src/asset/audit/coinspect-pad.png';
 import PeckShieldImg from 'src/asset/audit/peckshield.png';
 import Code4RenaImg from 'src/asset/audit/code4rena.png';
-import CoinSpectImg from 'src/asset/audit/coinspect.png';
+import HalBurnImg from 'src/asset/audit/halburn.svg';
 import MascotImg from 'src/asset/mascot.png';
 
 const AuditList = [
@@ -20,6 +19,16 @@ const AuditList = [
         padIconHeight: 29
     },
     {
+        padIcon: HalBurnImg,
+        icon: HalBurnImg,
+        status: 'Auditing...',
+        reportTime: 'Jun 2023',
+        padIconWidth: 117,
+        padIconHeight: 12,
+        width: 233,
+        height: 24
+    },
+    {
         padIcon: Code4RenaPadImg,
         icon: Code4RenaImg,
         status: 'Auditing...',
@@ -27,16 +36,6 @@ const AuditList = [
         padIconWidth: 144,
         padIconHeight: 24,
         width: 288,
-        height: 48
-    },
-    {
-        padIcon: CoinSpectPadImg,
-        icon: CoinSpectImg,
-        status: 'Auditing...',
-        reportTime: 'Jul 2023',
-        padIconWidth: 130,
-        padIconHeight: 28,
-        width: 216,
         height: 48
     }
 ];
