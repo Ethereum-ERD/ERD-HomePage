@@ -29,7 +29,7 @@ export default observer(function Main() {
     return (
         <div className={s.wrap}>
             <p className={s.name}>Ethereum Reserve Dollar</p>
-            <p className={s.slogan}>On Ethereum.By Ethereum.For Ethereum.</p>
+            <p className={s.slogan}>On Ethereum.{'\u00A0'}By Ethereum.{'\u00A0'}For Ethereum.</p>
             <div className={s.socialRow}>
                 {SocialList.map(row => {
                     return (

@@ -10,17 +10,17 @@ const Functions = [
     {
         icon: MintImg,
         name: 'Mint',
-        desc: 'Deposit collateral into ERD to mint USDE'
+        desc: 'Deposit collateral on ERD to mint USDE'
     },
     {
         icon: DepositImg,
         name: 'Deposit-SP',
-        desc: 'Deposit USDE to earn collaterals'
+        desc: 'Deposit USDE to earn interest'
     },
     {
         icon: LiquidateImg,
         name: 'Liquidate',
-        desc: 'Earn rewards by liquidating others trove'
+        desc: 'Earn rewards by liquidating existing troves'
     },
     {
         icon: RedeemImg,
@@ -48,11 +48,11 @@ export default function Experience() {
                 <div className={s.exploreCard}>
                     <img className={s.mascot} src={MascotImg} alt='mascot img' />
                     <div style={{ position: 'relative' }}>
-                        <p className={s.exploreTitle}>Mint, deposit, and earn on the decentralized stablecoin protocol</p>
+                        <p className={s.exploreTitle}>Mint, deposit, and earn on the ERD decentralized stablecoin protocol.</p>
                         <p className={s.exploreDesc}>We offer support for a diverse range of collaterals, enabling maximum liquidity release at a rate of 0.25%. Try it now.</p>
                     </div>
                     <div className={s.exploreBtn} onClick={handleExplore}>
-                        Explore all
+                        Try it out
                         <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.2314 2.96206L6.23148 7.48018L7.87976 7.48018L7.87968 0.999994C7.87968 0.723854 7.65582 0.5 7.37968 0.5L0.46243 0.499999L0.46243 1.94224L5.0659 1.94224L5.51797e-05 7.48018L1.16556 8.5L6.2314 2.96206Z" fill="white" fillOpacity="0.7"/>
                         </svg>
