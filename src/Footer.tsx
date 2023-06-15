@@ -6,7 +6,7 @@ import s from "./Footer.module.scss";
 
 export default observer(function Footer() {
     const handleClick = (url: string) => {
-        window.open(url, "_target");
+        window.open(url, "_blank");
     };
 
     return (

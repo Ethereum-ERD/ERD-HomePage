@@ -31,7 +31,7 @@ const Functions = [
 
 export default function Experience() {
     const handleExplore = () => {
-        window.open('https://app.erd.xyz', "_target");
+        window.open('https://app.erd.xyz', "_blank");
     };
 
     return (

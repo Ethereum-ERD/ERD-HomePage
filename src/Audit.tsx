@@ -11,12 +11,13 @@ const AuditList = [
     {
         padIcon: PeckShieldPadImg,
         icon: PeckShieldImg,
-        status: 'Auditing...',
+        status: '',
         reportTime: 'May 2023',
         width: 209,
         height: 51,
         padIconWidth: 137,
-        padIconHeight: 29
+        padIconHeight: 29,
+        link: 'https://github.com/Ethereum-ERD/ERD-Audits/blob/main/PeckShield-Audit-Report-ERD-v1.0.pdf'
     },
     {
         padIcon: HalBurnImg,
@@ -26,7 +27,8 @@ const AuditList = [
         padIconWidth: 117,
         padIconHeight: 12,
         width: 233,
-        height: 24
+        height: 24,
+        link: ''
     },
     {
         padIcon: Code4RenaPadImg,
@@ -36,14 +38,20 @@ const AuditList = [
         padIconWidth: 144,
         padIconHeight: 24,
         width: 288,
-        height: 48
+        height: 48,
+        link: ''
     }
 ];
 
 export default function Audit() {
 
     const handleReadMore = () => {
-        window.open('https://docs.erd.xyz', "_target");
+        window.open('https://docs.erd.xyz', "_blank");
+    };
+
+    const handleReadAuditReport = (link: string) => {
+        if (!link) return;
+        window.open(link, "_blank");
     };
 
     return (
@@ -53,7 +61,11 @@ export default function Audit() {
                 <div className={s.auditList}>
                     {AuditList.map(audit => {
                         return (
-                            <div key={audit.icon} className={s.audit}>
+                            <div
+                                key={audit.icon}
+                                className={s.audit}
+                                onClick={() => handleReadAuditReport(audit.link)}
+                            >
                                 <div>
                                     <img
                                         src={audit.icon}
