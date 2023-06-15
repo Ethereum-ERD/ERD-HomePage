@@ -1,3 +1,5 @@
+import cx from 'classnames';
+
 import s from './Audit.module.scss';
 
 import PeckShieldPadImg from 'src/asset/audit/peckshield-pad.png';
@@ -7,11 +9,16 @@ import Code4RenaImg from 'src/asset/audit/code4rena.png';
 import HalBurnImg from 'src/asset/audit/halburn.svg';
 import MascotImg from 'src/asset/mascot.png';
 
+enum AuditStatus {
+    Pending = 1,
+    Fulfill
+}
+
 const AuditList = [
     {
         padIcon: PeckShieldPadImg,
         icon: PeckShieldImg,
-        status: '',
+        status: AuditStatus.Fulfill,
         reportTime: 'May 2023',
         width: 209,
         height: 51,
@@ -22,7 +29,7 @@ const AuditList = [
     {
         padIcon: HalBurnImg,
         icon: HalBurnImg,
-        status: 'Auditing...',
+        status: AuditStatus.Pending,
         reportTime: 'Jun 2023',
         padIconWidth: 117,
         padIconHeight: 12,
@@ -33,7 +40,7 @@ const AuditList = [
     {
         padIcon: Code4RenaPadImg,
         icon: Code4RenaImg,
-        status: 'Auditing...',
+        status: AuditStatus.Pending,
         reportTime: 'Jun 2023',
         padIconWidth: 144,
         padIconHeight: 24,
@@ -49,11 +56,6 @@ export default function Audit() {
         window.open('https://docs.erd.xyz', "_blank");
     };
 
-    const handleReadAuditReport = (link: string) => {
-        if (!link) return;
-        window.open(link, "_blank");
-    };
-
     return (
         <div className={s.wrap}>
             <p className={s.title}>Audit</p>
@@ -61,11 +63,7 @@ export default function Audit() {
                 <div className={s.auditList}>
                     {AuditList.map(audit => {
                         return (
-                            <div
-                                key={audit.icon}
-                                className={s.audit}
-                                onClick={() => handleReadAuditReport(audit.link)}
-                            >
+                            <div key={audit.icon} className={s.audit}>
                                 <div>
                                     <img
                                         src={audit.icon}
@@ -81,7 +79,19 @@ export default function Audit() {
                                     />
                                     <p className={s.auditTime}>{audit.reportTime}</p>
                                 </div>
-                                <p className={s.auditStatus}>{audit.status}</p>
+                                {audit.status === AuditStatus.Pending && (
+                                    <p className={s.auditStatus}>Auditing...</p>
+                                )}
+                                {audit.status === AuditStatus.Fulfill && (
+                                    <a
+                                        target="_blank"
+                                        href={`${audit.link}`}
+                                        rel="noreferrer noopenner"
+                                        className={cx(s.auditStatus, s.fulfill)}
+                                    >
+                                        View report
+                                    </a>
+                                )}
                             </div>
                         );
                     })}
