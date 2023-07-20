@@ -28,13 +28,13 @@ const AuditList = [
     {
         padIcon: HalBurnImg,
         icon: HalBurnImg,
-        status: AuditStatus.Pending,
+        status: AuditStatus.Fulfill,
         reportTime: 'Jun 2023',
         padIconWidth: 117,
         padIconHeight: 12,
         width: 233,
         height: 24,
-        link: ''
+        link: 'https://github.com/Ethereum-ERD/ERD-Audits/blob/main/ERD_Ethereum_Reserve_Dollar_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf'
     },
     {
         padIcon: QuantStampImg,
