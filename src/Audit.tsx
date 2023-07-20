@@ -3,10 +3,9 @@ import cx from 'classnames';
 import s from './Audit.module.scss';
 
 import PeckShieldPadImg from 'src/asset/audit/peckshield-pad.png';
-import Code4RenaPadImg from 'src/asset/audit/code4rena-pad.png';
 import PeckShieldImg from 'src/asset/audit/peckshield.png';
-import Code4RenaImg from 'src/asset/audit/code4rena.png';
 import HalBurnImg from 'src/asset/audit/halburn.svg';
+import QuantStampImg from 'src/asset/audit/quantstamp.svg';
 import MascotImg from 'src/asset/mascot.png';
 
 enum AuditStatus {
@@ -38,14 +37,14 @@ const AuditList = [
         link: ''
     },
     {
-        padIcon: Code4RenaPadImg,
-        icon: Code4RenaImg,
+        padIcon: QuantStampImg,
+        icon: QuantStampImg,
         status: AuditStatus.Pending,
-        reportTime: 'Jun 2023',
-        padIconWidth: 144,
-        padIconHeight: 24,
-        width: 288,
-        height: 48,
+        reportTime: 'Jul 2023',
+        padIconWidth: 155,
+        padIconHeight: 29,
+        width: 155,
+        height: 29,
         link: ''
     }
 ];
@@ -71,12 +70,14 @@ export default function Audit() {
                                         className={s.auditIcon}
                                         style={{ width: audit.width, height: audit.height }}
                                     />
-                                    <img
-                                        src={audit.padIcon}
-                                        alt='audit icon'
-                                        className={s.auditPadIcon}
-                                        style={{ width: audit.padIconWidth, height: audit.padIconHeight }}
-                                    />
+                                    <div className={s.padIconWrap}>
+                                        <img
+                                            src={audit.padIcon}
+                                            alt='audit icon'
+                                            className={s.auditPadIcon}
+                                            style={{ width: audit.padIconWidth, height: audit.padIconHeight }}
+                                        />
+                                    </div>
                                     <p className={s.auditTime}>{audit.reportTime}</p>
                                 </div>
                                 {audit.status === AuditStatus.Pending && (

@@ -52,7 +52,7 @@
     display: block;
 }
 
-.auditPadIcon {
+.padIconWrap {
     display: none;
 }
 
@@ -196,7 +196,8 @@
         display: none;
     }   
 
-    .auditPadIcon {
+    .padIconWrap {
+        min-height: 29px;
         display: block;
     }
 
@@ -285,6 +286,7 @@
     .auditTime {
         margin-top: 0;
         font-size: 12px;
+        flex: 0 0 auto;
     }
 
     .auditStatus {
