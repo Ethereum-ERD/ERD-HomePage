@@ -5,6 +5,7 @@ import Brand from "src/asset/brand.svg";
 import s from "./Footer.module.scss";
 
 export default observer(function Footer() {
+
     const handleClick = (url: string) => {
         window.open(url, "_blank");
     };
@@ -37,6 +38,8 @@ export default observer(function Footer() {
                         <p onClick={() => handleClick("https://docs.erd.xyz")}>
                             Docs
                         </p>
+                        <p className={s.disclaimer} onClick={() => handleClick('https://disclaimer.erd.xyz/website-disclaimer')}>ERD Website Disclaimer</p>
+                        <p className={s.disclaimer} onClick={() => handleClick('https://disclaimer.erd.xyz/protocol-disclaimer')}>ERD Protocol Disclaimer</p>
                     </div>
                 </div>
                 <div className={s.medias}>
@@ -72,6 +75,10 @@ export default observer(function Footer() {
                             <path d="M14 0.875C6.75281 0.875 0.875 6.90028 0.875 14.3318C0.875 20.2775 4.63531 25.3215 9.85141 27.1012C10.5066 27.2257 10.7188 26.8085 10.7188 26.4541V23.9489C7.06781 24.7631 6.30766 22.361 6.30766 22.361C5.71047 20.8056 4.84969 20.3919 4.84969 20.3919C3.65859 19.5564 4.94047 19.5744 4.94047 19.5744C6.25844 19.6685 6.95187 20.9615 6.95187 20.9615C8.12219 23.0182 10.022 22.4238 10.7712 22.0796C10.8883 21.2105 11.2284 20.6161 11.6047 20.2808C8.68984 19.9388 5.62516 18.7849 5.62516 13.6298C5.62516 12.1597 6.13813 10.9598 6.97703 10.0178C6.84141 9.67799 6.39187 8.30876 7.105 6.45621C7.105 6.45621 8.2075 6.09512 10.7155 7.83553C11.7622 7.53724 12.8844 7.38809 14 7.38249C15.1156 7.38809 16.2389 7.53724 17.2878 7.83553C19.7936 6.09512 20.8939 6.45621 20.8939 6.45621C21.6081 8.30988 21.1586 9.67911 21.023 10.0178C21.8652 10.9598 22.3737 12.1608 22.3737 13.6298C22.3737 18.7983 19.3036 19.9366 16.3811 20.2696C16.8514 20.6868 17.2812 21.5054 17.2812 22.7614V26.4541C17.2812 26.8119 17.4912 27.2324 18.1573 27.1001C23.3691 25.3182 27.125 20.2752 27.125 14.3318C27.125 6.90028 21.2483 0.875 14 0.875Z" fill="#666666"/>
                         </svg>
                     </div>
+                </div>
+                <div className={s.mobileDisclaimer}>
+                    <p onClick={() => handleClick('https://disclaimer.erd.xyz/website-disclaimer')}>ERD Website Disclaimer</p>
+                    <p onClick={() => handleClick('https://disclaimer.erd.xyz/protocol-disclaimer')}>ERD Protocol Disclaimer</p>
                 </div>
             </div>
         </div>
