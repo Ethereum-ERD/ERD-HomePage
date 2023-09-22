@@ -2,10 +2,15 @@ import cx from 'classnames';
 
 import s from './Audit.module.scss';
 
-import PeckShieldPadImg from 'src/asset/audit/peckshield-pad.png';
-import PeckShieldImg from 'src/asset/audit/peckshield.png';
-import HalBurnImg from 'src/asset/audit/halburn.svg';
-import QuantStampImg from 'src/asset/audit/quantstamp.svg';
+import PeckShieldMobileImg from 'src/asset/audit/peck-shield-mobile.png';
+import PeckShieldPadImg from 'src/asset/audit/peck-shield-pad.png';
+import PeckShieldImg from 'src/asset/audit/peck-shield.png';
+import QuantStampMobileImg from 'src/asset/audit/quantstamp-mobile.png';
+import QuantStampPadImg from 'src/asset/audit/quantstamp-pad.png';
+import QuantStampImg from 'src/asset/audit/quantstamp.png';
+import HalBornMobileImg from 'src/asset/audit/halborn-mobile.png';
+import HalBornPadImg from 'src/asset/audit/halborn-pad.png';
+import HalBornImg from 'src/asset/audit/halburn.png';
 import MascotImg from 'src/asset/mascot.png';
 
 enum AuditStatus {
@@ -15,36 +20,36 @@ enum AuditStatus {
 
 const AuditList = [
     {
-        padIcon: PeckShieldPadImg,
         icon: PeckShieldImg,
+        padIcon: PeckShieldPadImg,
+        mobileIcon: PeckShieldMobileImg,
         status: AuditStatus.Fulfill,
         reportTime: 'May 2023',
         width: 209,
-        height: 51,
-        padIconWidth: 137,
-        padIconHeight: 29,
+        padWidth: 137,
+        mobileWidth: 137,
         link: 'https://github.com/Ethereum-ERD/ERD-Audits/blob/main/PeckShield-Audit-Report-ERD-v1.0.pdf'
     },
     {
-        padIcon: HalBurnImg,
-        icon: HalBurnImg,
+        icon: HalBornImg,
+        padIcon: HalBornPadImg,
+        mobileIcon: HalBornMobileImg,
         status: AuditStatus.Fulfill,
         reportTime: 'Jun 2023',
-        padIconWidth: 117,
-        padIconHeight: 12,
-        width: 233,
-        height: 24,
+        width: 215,
+        padWidth: 121,
+        mobileWidth: 121,
         link: 'https://github.com/Ethereum-ERD/ERD-Audits/blob/main/ERD_Ethereum_Reserve_Dollar_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf'
     },
     {
-        padIcon: QuantStampImg,
         icon: QuantStampImg,
+        padIcon: QuantStampPadImg,
+        mobileIcon: QuantStampMobileImg,
         status: AuditStatus.Pending,
         reportTime: 'Jul 2023',
-        padIconWidth: 155,
-        padIconHeight: 29,
-        width: 155,
-        height: 29,
+        width: 206,
+        padWidth: 122,
+        mobileWidth: 122,
         link: ''
     }
 ];
@@ -64,18 +69,25 @@ export default function Audit() {
                         return (
                             <div key={audit.icon} className={s.audit}>
                                 <div>
-                                    <img
-                                        src={audit.icon}
-                                        alt='audit icon'
-                                        className={s.auditIcon}
-                                        style={{ width: audit.width, height: audit.height }}
-                                    />
+                                    <div className={s.iconWrap}>
+                                        <img
+                                            src={audit.icon}
+                                            alt='audit icon'
+                                            style={{ width: audit.width }}
+                                        />
+                                    </div>
                                     <div className={s.padIconWrap}>
                                         <img
                                             src={audit.padIcon}
                                             alt='audit icon'
-                                            className={s.auditPadIcon}
-                                            style={{ width: audit.padIconWidth, height: audit.padIconHeight }}
+                                            style={{ width: audit.padWidth }}
+                                        />
+                                    </div>
+                                    <div className={s.mobileIconWrap}>
+                                        <img
+                                            src={audit.mobileIcon}
+                                            alt='audit icon'
+                                            style={{ width: audit.mobileWidth }}
                                         />
                                     </div>
                                     <p className={s.auditTime}>{audit.reportTime}</p>

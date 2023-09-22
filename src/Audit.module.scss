@@ -48,12 +48,19 @@
     margin-top: 0;
 }
 
-.auditIcon {
+.iconWrap {
     display: block;
 }
 
-.padIconWrap {
+.padIconWrap,
+.mobileIconWrap {
     display: none;
+}
+
+.padIconWrap {
+    height: 30px;
+    flex: 0 0 auto;
+    align-items: center;
 }
 
 .auditTime {
@@ -64,7 +71,7 @@
 }
 
 .auditStatus {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 133%;
     color: rgba(255, 255, 255, .7);
 
@@ -95,7 +102,7 @@
 }
 
 .auditTitle {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 133%;
     color: #fff;
     font-weight: 500;
@@ -103,7 +110,7 @@
 
 .auditDesc {
     margin-top: 28px;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 133%;
     font-weight: 450;
     color: rgba(255, 255, 255, .7);
@@ -192,13 +199,13 @@
         font-size: 14px;
     }
 
-    .auditIcon {
+    .iconWrap,
+    .mobileIconWrap {
         display: none;
-    }   
+    }
 
     .padIconWrap {
-        min-height: 29px;
-        display: block;
+        display: flex;
     }
 
     .auditTime {
@@ -275,11 +282,12 @@
         }
     }
 
-    .auditIcon {
-        display: none;
+    .iconWrap,
+    .padIconWrap {
+        display: none !important;
     }
 
-    .auditPadIcon {
+    .mobileIconWrap {
         display: block;
     }
 
