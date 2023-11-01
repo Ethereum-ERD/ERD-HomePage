@@ -39,13 +39,13 @@ const AuditList = [
     {
         padIcon: QuantStampImg,
         icon: QuantStampImg,
-        status: AuditStatus.Pending,
+        status: AuditStatus.Fulfill,
         reportTime: 'Jul 2023',
         padIconWidth: 155,
         padIconHeight: 29,
         width: 155,
         height: 29,
-        link: ''
+        link: 'https://github.com/Ethereum-ERD/ERD-Audits/blob/main/Ethereum%20Reserve%20Dollar%20(ERD)%20-%20Report.pdf'
     }
 ];
 
