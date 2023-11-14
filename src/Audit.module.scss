@@ -1,6 +1,6 @@
 .wrap {
     width: 100vw;
-    max-width: 1200px;
+    max-width: 1366px;
     margin: 0 auto;
     margin-top: 150px;
 }
@@ -34,6 +34,10 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+
+    & div img {
+        height: auto;
+    }
 }
 
 .mascot {
@@ -48,11 +52,12 @@
     margin-top: 0;
 }
 
-.auditIcon {
+.iconWrap {
     display: block;
 }
 
-.padIconWrap {
+.padIconWrap,
+.mobileIconWrap {
     display: none;
 }
 
@@ -95,15 +100,15 @@
 }
 
 .auditTitle {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 133%;
     color: #fff;
     font-weight: 500;
 }
 
 .auditDesc {
-    margin-top: 28px;
-    font-size: 28px;
+    margin-top: 24px;
+    font-size: 20px;
     line-height: 133%;
     font-weight: 450;
     color: rgba(255, 255, 255, .7);
@@ -140,7 +145,7 @@
     }
 }
 
-@media screen and (max-width: 1199px) and (min-width: 744px) {
+@media screen and (max-width: 1365px) and (min-width: 744px) {
     .wrap {
         margin-top: 87px;
         padding: 0 30px;
@@ -192,12 +197,12 @@
         font-size: 14px;
     }
 
-    .auditIcon {
+    .iconWrap,
+    .mobileIconWrap {
         display: none;
     }   
 
     .padIconWrap {
-        min-height: 29px;
         display: block;
     }
 
@@ -267,7 +272,7 @@
         margin-top: 20px;
         flex-direction: column;
 
-        div {
+        & > div {
             width: 100%;
             display: flex;
             align-items: center;
@@ -275,11 +280,12 @@
         }
     }
 
-    .auditIcon {
+    .iconWrap,
+    .padIconWrap {
         display: none;
     }
 
-    .auditPadIcon {
+    .mobileIconWrap {
         display: block;
     }
 

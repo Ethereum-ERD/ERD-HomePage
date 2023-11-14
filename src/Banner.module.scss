@@ -7,7 +7,7 @@
 
 .container {
     height: 100%;
-    max-width: 1200px;
+    max-width: 1366px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -92,7 +92,7 @@ li.mobileMenuItem {
     }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1365px) {
     .logo {
         width: 30px;
         height: 30px;
@@ -105,7 +105,7 @@ li.mobileMenuItem {
     }
 }
 
-@media screen and (max-width: 1199px) and (min-width: 744px) {
+@media screen and (max-width: 1365px) and (min-width: 744px) {
     .container {
         padding: 0 24px;
     }

@@ -4,13 +4,13 @@
     --top-wrap-bottom-padding: 226px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1365px) {
     :root {
         --banner-height: 50px;
     }
 }
 
-@media screen and (max-width: 1199px) and (min-width: 744px) {
+@media screen and (max-width: 1365px) and (min-width: 744px) {
     :root {
         --top-wrap-height: 424px;
         --top-wrap-bottom-padding: 82px;
