@@ -2,6 +2,7 @@
     --banner-height: 100px;
     --top-wrap-height: 1080px;
     --top-wrap-bottom-padding: 226px;
+    --content-max-width: 1210px;
 }
 
 @media screen and (max-width: 1365px) {

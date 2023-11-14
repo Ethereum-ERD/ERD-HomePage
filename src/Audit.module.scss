@@ -1,6 +1,6 @@
 .wrap {
     width: 100vw;
-    max-width: 1366px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     margin-top: 150px;
 }

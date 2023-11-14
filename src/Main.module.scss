@@ -1,7 +1,7 @@
 .wrap {
     width: 100vw;
     height: calc(var(--top-wrap-height) - var(--banner-height));
-    max-width: 1366px;
+    max-width: var(--content-max-width);
     padding-bottom: var(--top-wrap-bottom-padding);
     margin: 0 auto;
     display: flex;
@@ -43,19 +43,25 @@
 
 @media screen and (max-width: 1365px) {
     .name {
+        padding: 0;
         font-size: 30px;
         line-height: 133%;
     }
 
     .slogan {
+        padding: 0;
         font-size: 14px;
         line-height: 133%;
+    }
+
+    .socialRow {
+        padding: 0;
     }
 }
 
 @media screen and (max-width: 1365px) and (min-width: 744px) {
     .wrap {
-        padding: 0 44px;
+        padding: 0 30px;
         padding-bottom: var(--top-wrap-bottom-padding);
     }
 }
