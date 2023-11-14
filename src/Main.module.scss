@@ -1,7 +1,7 @@
 .wrap {
     width: 100vw;
     height: calc(var(--top-wrap-height) - var(--banner-height));
-    max-width: 1200px;
+    max-width: 1366px;
     padding-bottom: var(--top-wrap-bottom-padding);
     margin: 0 auto;
     display: flex;
@@ -41,7 +41,7 @@
     }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1365px) {
     .name {
         font-size: 30px;
         line-height: 133%;
@@ -53,7 +53,7 @@
     }
 }
 
-@media screen and (max-width: 1199px) and (min-width: 744px) {
+@media screen and (max-width: 1365px) and (min-width: 744px) {
     .wrap {
         padding: 0 44px;
         padding-bottom: var(--top-wrap-bottom-padding);

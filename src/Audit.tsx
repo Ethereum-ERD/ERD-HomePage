@@ -2,9 +2,14 @@ import cx from 'classnames';
 
 import s from './Audit.module.scss';
 
-import PeckShieldPadImg from 'src/asset/audit/peckshield-pad.png';
-import PeckShieldImg from 'src/asset/audit/peckshield.png';
+import PeckShieldMobileImg from 'src/asset/audit/peckshield-mobile.svg';
+import PeckShieldPadImg from 'src/asset/audit/peckshield-pad.svg';
+import PeckShieldImg from 'src/asset/audit/peckshield.svg';
 import HalBurnImg from 'src/asset/audit/halburn.svg';
+import HalBurnMobileImg from 'src/asset/audit/halburn-mobile.svg';
+import HalBurnPadImg from 'src/asset/audit/halburn-pad.svg';
+import QuantStampMobileImg from 'src/asset/audit/quantstamp-mobile.svg';
+import QuantStampPadImg from 'src/asset/audit/quantstamp-pad.svg';
 import QuantStampImg from 'src/asset/audit/quantstamp.svg';
 import MascotImg from 'src/asset/mascot.png';
 
@@ -17,34 +22,34 @@ const AuditList = [
     {
         padIcon: PeckShieldPadImg,
         icon: PeckShieldImg,
+        mobileIcon: PeckShieldMobileImg,
         status: AuditStatus.Fulfill,
         reportTime: 'May 2023',
         width: 209,
-        height: 51,
         padIconWidth: 137,
-        padIconHeight: 29,
+        mobileIconWidth: 137,
         link: 'https://github.com/Ethereum-ERD/ERD-Audits/blob/main/PeckShield-Audit-Report-ERD-v1.0.pdf'
     },
     {
-        padIcon: HalBurnImg,
+        padIcon: HalBurnPadImg,
         icon: HalBurnImg,
+        mobileIcon: HalBurnMobileImg,
         status: AuditStatus.Fulfill,
         reportTime: 'Jun 2023',
-        padIconWidth: 117,
-        padIconHeight: 12,
-        width: 233,
-        height: 24,
+        padIconWidth: 121,
+        width: 215,
+        mobileIconWidth: 121,
         link: 'https://github.com/Ethereum-ERD/ERD-Audits/blob/main/ERD_Ethereum_Reserve_Dollar_Smart_Contract_Security_Assessment_Report_Halborn_Final.pdf'
     },
     {
-        padIcon: QuantStampImg,
+        padIcon: QuantStampPadImg,
+        mobileIcon: QuantStampMobileImg,
         icon: QuantStampImg,
         status: AuditStatus.Fulfill,
         reportTime: 'Jul 2023',
-        padIconWidth: 155,
-        padIconHeight: 29,
-        width: 155,
-        height: 29,
+        padIconWidth: 122,
+        mobileIconWidth: 122,
+        width: 206,
         link: 'https://github.com/Ethereum-ERD/ERD-Audits/blob/main/Ethereum%20Reserve%20Dollar%20(ERD)%20-%20Report.pdf'
     }
 ];
@@ -64,18 +69,25 @@ export default function Audit() {
                         return (
                             <div key={audit.icon} className={s.audit}>
                                 <div>
-                                    <img
-                                        src={audit.icon}
-                                        alt='audit icon'
-                                        className={s.auditIcon}
-                                        style={{ width: audit.width, height: audit.height }}
-                                    />
+                                    <div className={s.iconWrap}>
+                                        <img
+                                            src={audit.icon}
+                                            alt='audit icon'
+                                            style={{ width: audit.width }}
+                                        />
+                                    </div>
                                     <div className={s.padIconWrap}>
                                         <img
                                             src={audit.padIcon}
                                             alt='audit icon'
-                                            className={s.auditPadIcon}
-                                            style={{ width: audit.padIconWidth, height: audit.padIconHeight }}
+                                            style={{ width: audit.padIconWidth }}
+                                        />
+                                    </div>
+                                    <div className={s.mobileIconWrap}>
+                                        <img
+                                            src={audit.mobileIcon}
+                                            alt='audit icon'
+                                            style={{ width: audit.mobileIconWidth }}
                                         />
                                     </div>
                                     <p className={s.auditTime}>{audit.reportTime}</p>
