@@ -14,13 +14,13 @@
 @media screen and (max-width: 1365px) and (min-width: 744px) {
     :root {
         --top-wrap-height: 424px;
-        --top-wrap-bottom-padding: 82px;
+        --top-wrap-bottom-padding: 75px;
     }
 }
 
 @media screen and (max-width: 743px) {
     :root {
         --top-wrap-height: 360px;
-        --top-wrap-bottom-padding: 63px;
+        --top-wrap-bottom-padding: 5px;
     }
 }
